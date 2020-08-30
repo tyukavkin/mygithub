@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <meta name="article_html" />
+  <meta test="{{ SITEURL }}/{{ article.url }}_{{ article.title|striptags }}"/>
+  {% import 'translations.html' as translations with context %}
+
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<!-- ==================== aboutme-section start ==================== -->
+<div class="sec-p100-bg-bs mb-30 clearfix">
+  <div class="Section-title">
+      <h2>{{ article.title }}</h2>
+  </div>
+  <!-- /.Section-title -->
+
+  <div class="personal-details-area">
+    <div class="row">
+        <div class="col l12 m12 s12">
+          {{ article.content }}
+        </div>
+        <!-- colm6 -->
+    </div>
+    <!-- row -->
+</div>
+<!-- /.personal-details-area -->
+
+  <!-- /.personal-details-area -->
+  <!-- /.success -->
+</div>
+<!-- /.aboutme-section -->
+<!-- ==================== aboutme-section end ==================== -->
+{% endblock %}

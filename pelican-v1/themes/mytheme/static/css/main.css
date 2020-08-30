@@ -1,0 +1,9 @@
+@import url("materialize.css");
+@import url("font-awesome.min.css");
+@import url("owl.carousel.min.css");
+@import url("owl.theme.default.min.css");
+@import url("animate.css");
+/* my css include */
+@import url("reset.css");
+@import url("style.css");
+@import url("responsive.css");
