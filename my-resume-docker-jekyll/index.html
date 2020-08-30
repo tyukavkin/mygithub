@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="sec-p100-bg-bs mb-30 clearfix" id="">
+
+            <div class="Section-title">
+                <h2>
+					<i class="fa fa-newspaper-o" aria-hidden="true"></i>
+					Новое в блоге
+				</h2>
+                <span>Latest News</span>
+                <p>
+                    Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.
+                </p>
+            </div>
+            <!-- /.Section-title -->
+  
+    {% for post in paginator.posts %}
+        {% assign minutes = post.content | strip_html | number_of_words | divided_by: 180 %}
+        {% if minutes == 0 %}
+            {% assign minutes = 1 %}
+        {% endif %}
+
+            <div class="news-item clearfix">
+                <div class="news-image b4-1 left">
+                    <img src="{{ post.url | prepend: site.url }}{{ post.image_post }}" alt="{{ post.image_post_alttext }}">
+                </div>
+                <!-- /.news-image -->
+                <div class="news-contant right left-align">
+                    <h2 class="title">{{ post.title }}</h2>
+                    <ul class="post-mate2">
+                        <li class="pm-r25">By <a href="index.html#">akshay</a></li>
+                        <li class="pm-r25">1{{ post.date | date_to_long_string }}</li>
+                        <li class="pm-r25">4 comment</li>
+                    </ul>
+                    <p>
+                        {{ post.summary }}
+                    </p>
+                    <a href="{{ post.url | prepend: site.url }}" class="custom-btn waves-effect waves-light">
+                        <i class="fa fa-address-book-o" aria-hidden="true"></i> Читать
+                    </a>
+                </div>
+                <!-- /.news-contant -->
+            </div>
+            <!-- /.news-item -->
+
+    {% endfor %}
+
+</div>
+
+

@@ -1,0 +1,5 @@
+Sitemap: https://webstrot.com/sitemap.xml
+Sitemap: https://webstrot.com/news-sitemap.xml
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php

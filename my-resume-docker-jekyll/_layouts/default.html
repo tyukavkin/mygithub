@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% include head.html %}
+
+<body class="clearfix">
+
+    <div data-scroll='0' class="thetop"></div>
+    <!-- for back to top -->
+    
+    {% include left-sidebar.html %}
+
+    <!-- ========== ========== right side body start ========== ========== -->
+    <div class="right-side-body">
+
+        {% include header.html %}
+        {{ content }}
+        {% include footer-section.html %}
+
+    </div>
+    <!-- ========== ========== right side body end ========== ========== -->
+
+    {% include script-footer.html %}
+
+</body>
+
+</html>
