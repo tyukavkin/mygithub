@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:700&subset=cyrillic");
+
+html {
+	/* font: 1em / 1.25 "Helvetica Neue", "Segoe UI", Ubuntu, Roboto, sans-serif; */
+	font: 1em / 1.25 system-ui;
+}
+
+input,
+select,
+button {
+	font: inherit;
+}
+
+article {
+	border: 1px solid transparent;
+	padding: 1em 0.25em;
+	position: relative;
+	max-width: 12.5em;
+	display: inline-flex;
+	flex-direction: column;
+	margin: 0.25em;
+	text-align: center;
+	cursor: default;
+	transition: border 500ms;
+}
+
+article:hover {
+	border-color: #ababab;
+	box-shadow: 2px 2px 5px 0 #ababab;
+}
+
+article img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
+	transition: opacity 300ms;
+}
+
+article img:hover {
+	opacity: 0.75;
+}
+
+#products {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+}
+
+#products > button {
+	flex-basis: 100%;
+}
+
+.price {
+	font-family: Oswald;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1;
+	text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff,
+		0 5px 5px #b3b3b3;
+}
+
+.price > .cents {
+	font-size: 50%;
+	vertical-align: top;
+}
+
+p {
+	flex: 1;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form > label:first-of-type {
+	flex: 100%;
+	padding: 1em;
+	background: hsla(0, 0%, 6%, 0.85);
+	color: white;
+	text-align: center;
+	font-size: 200%;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0.05em black;
+	text-shadow: 0 0.05em black;
+}
+
+fieldset {
+	flex: 0 0 10em;
+	align-self: flex-start;
+	border: 0;
+	margin: 1em;
+	padding: 0;
+	position: sticky;
+	top: 8em;
+}
+
+@media (max-width: 30em) {
+	fieldset {
+		position: relative;
+		top: 0;
+		flex: 100%;
+	}
+}
+
+@media (max-width: 50em) {
+	form > label:first-of-type {
+		font-size: 120%;
+	}
+}
+
+fieldset > legend {
+	display: none;
+}
+
+body {
+	margin: 0;
+}
+
+form > label:first-of-type #search {
+	outline: 0;
+	font: inherit;
+	text-shadow: inherit;
+	color: inherit;
+	border: 0 solid #00bcd4;
+	border-bottom-width: 2px;
+	background: none;
+}
+
+fieldset > label {
+	display: block;
+	clear: both;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ababab;
+	margin-bottom: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Oswald;
+}
+
+fieldset > label:last-of-type {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+fieldset label > * {
+	display: block;
+	width: 100%;
+}
+
+fieldset label > input[type="checkbox"] {
+	display: inline-block;
+	width: 1em;
+}
+
+@supports (--css: variables) {
+	input[type="range"] {
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+
+	input[type="range"]:first-of-type {
+		position: absolute;
+	}
+
+	input[type="range"]:first-of-type::-webkit-slider-thumb {
+		position: relative;
+		z-index: 2;
+	}
+
+	input[type="range"]:first-of-type::-moz-range-thumb {
+		transform: scale(1);
+		z-index: 1;
+	}
+
+	input[type="range"]::-moz-range-track {
+		border-color: transparent;
+	}
+
+	input[type="range"] {
+		position: relative;
+	}
+}
