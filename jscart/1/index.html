@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+	<form>
+		<label>
+			Search:
+			<input type="search" id="search" placeholder="Start typing..." autocomplete="off">
+		</label>
+
+		<fieldset>
+			<legend>Filter</legend>
+
+			<label>
+				Results per page
+				<select id="results-per-page">
+					<option selected>12</option>
+					<option>30</option>
+					<option>60</option>
+					<option>120</option>
+				</select>
+			</label>
+
+			<label>
+				Sort by
+				<select id="order">
+					<option value="0">Description</option>
+					<option value="1">Price (low to high)</option>
+					<option value="2" selected>Price (high to low)</option>
+				</select>
+			</label>
+			
+			<label>
+				Exact match
+				<input id="exact-search" type="checkbox" title="Whole words only">
+			</label>
+
+			<label id="range-display">
+				Price
+				<input id="price-min" type="range" min="0" max="2100" value="0">
+				<input id="price-max" type="range" min="0" max="2100" value="2100">
+			</label>
+		</fieldset>
+
+		<output id="products">Loading...</output>
+	</form>
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>

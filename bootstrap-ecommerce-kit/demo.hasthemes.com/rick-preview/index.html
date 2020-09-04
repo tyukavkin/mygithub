@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Rick - Mobile eCommerce HTML Template</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="p2/img/favicon.ico" />
+  <!-- All CSS Files -->
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- Icon Font -->
+  <link rel="stylesheet" href="p2/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="p2/css/et-line.css" />
+  <!-- Plugins css file -->
+  <link rel="stylesheet" href="p2/css/plugins.css" />
+  <!-- Theme main style -->
+  <link rel="stylesheet" href="p2/style.css" />
+  <!-- Responsive css -->
+  <link rel="stylesheet" href="p2/css/responsive.css" />
+  <!-- Modernizr JS -->
+  <script src="p2/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <style type="text/css">
+    .buy-btn:hover {
+      color: #ffffff;
+      border-color: #00c569;
+      background-color: #00c569;
+    }
+
+    .header-section .buy-btn {
+      font-weight: 600;
+
+      color: #ffffff;
+      border-color: #000000;
+      background-color: #000000;
+    }
+
+    .header-section .buy-btn:hover {
+      color: #ffffff;
+      border-color: #00c569;
+      background-color: #00c569;
+    }
+
+    .stick.header-section .buy-btn {
+      color: #ffffff;
+      border-color: #000000;
+      background-color: #000000;
+    }
+
+    .stick.header-section .buy-btn:hover {
+      color: #ffffff;
+      border-color: #00c569;
+      background-color: #00c569;
+    }
+
+    .demo-item .image img {
+      border: 1px solid #f1f1f1;
+    }
+
+    .demo-item:hover .image {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .demo-item .image::after {
+      display: none;
+    }
+
+    .demo-item .image i {
+      display: none;
+    }
+
+    .stick .buy-btn {
+      color: #00c569;
+      border: 2px solid #00c569;
+    }
+
+    .single-feature .icon {
+      width: 50px;
+
+      color: #00c569;
+    }
+
+    .single-feature .content h4 {
+      line-height: 1;
+    }
+
+    .footer-section {
+      background-color: #444;
+    }
+
+    .stick .buy-btn:hover {
+      color: #fff;
+    }
+
+    .demo-item .title a:hover {
+      color: #00c569;
+    }
+
+    .demo-item .title {
+      font-weight: 500;
+
+      margin-top: 20px;
+
+      text-transform: capitalize;
+    }
+
+    .demo-item .title span {
+      font-size: 13px;
+    }
+
+    .footer-section .buy-btn:hover {
+      color: #ffffff;
+      border-color: #00c569;
+      background-color: #00c569;
+    }
+
+    .hero-content h1 {
+      text-transform: none;
+    }
+
+    .hero-content h1 strong {
+      text-transform: capitalize;
+    }
+
+    .logo {
+      padding: 6.5px 0;
+    }
+
+    .logo a,
+    .stick .logo a {
+      width: auto;
+    }
+
+    .overlay::before {
+      display: none;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .footer-section .buy-btn {
+        float: left !important;
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+
+      .logo a,
+      .stick .logo a {
+        width: 140px;
+      }
+    }
+
+    /* The device with borders */
+    .smartphone {
+      position: relative;
+
+      width: 414px;
+      max-width: 100%;
+      height: 900px;
+      margin: 0;
+      margin-left: auto;
+
+      border: 16px black solid;
+      border-top-width: 60px;
+      border-bottom-width: 60px;
+      border-radius: 36px;
+    }
+
+    /* The horizontal line on the top of the device */
+    .smartphone:before {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+
+      display: block;
+
+      width: 60px;
+      height: 5px;
+
+      content: "";
+      transform: translate(-50%, -50%);
+
+      border-radius: 10px;
+      background: #333;
+    }
+
+    /* The circle on the bottom of the device */
+    .smartphone:after {
+      position: absolute;
+      bottom: -65px;
+      left: 50%;
+
+      display: block;
+
+      width: 35px;
+      height: 35px;
+
+      content: "";
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+      background: #333;
+    }
+
+    /* The screen (or content) of the device */
+    .smartphone .content {
+      width: 100%;
+      height: 100%;
+
+      background: white;
+    }
+
+    .hero-content__text {
+      width: 420px;
+      max-width: 100%;
+    }
+
+    .hero-content__text h1 {
+      font-size: 70px;
+      font-weight: 700;
+
+      color: #333;
+    }
+
+    .hero-content__text h3 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    .hero-content__qrcode {
+      margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .hero-content__text {
+        margin-bottom: 30px;
+      }
+
+      .hero-content__text h1 {
+        font-size: 50px;
+      }
+
+      .hero-content__text h3 {
+        font-size: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      .hero-content__text {
+        margin-bottom: 30px;
+      }
+
+      .hero-content__text h1 {
+        font-size: 40px;
+      }
+
+      .hero-content__text h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Start Header Section -->
+  <div class="header-section section sticker">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-6">
+          <!-- Logo -->
+          <div class="logo float-left">
+            <a href="index.html"><img src="p2/img/logo-color.png" class="img-fluid" alt="" /><img
+                src="p2/img/logo-color.png" alt="" class="sticky-logo img-fluid" /></a>
+          </div>
+        </div>
+        <div class="col-6">
+          <!-- Logo -->
+          <div class="float-right">
+            <a class="buy-btn"
+              href="https://1.envato.market/c/417168/275988/4415?subId1=hasthemes&subId2=demo&subId3=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F25830301%3Flicense%3Dregular%26size%3Dsource&u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F25830301%3Flicense%3Dregular%26size%3Dsource">buy
+              Rick</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Section End -->
+
+  <!-- Start Hero Section -->
+  <div class="hero-section section">
+    <div class="container">
+      <div class="row mb-5 align-items-center">
+        <div class="col-lg-6 text-md-center text-lg-left">
+          <div class="hero-content__text ml-md-auto mr-md-auto mr-lg-auto ml-lg-0">
+            <h1>Rick</h1>
+            <h3>
+              Mobile eCommerce HTML Template (Layout One)
+            </h3>
+            <div class="hero-content__qrcode">
+              <img src="p2/img/frame.png" alt="qr code" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-content__mobile mb-5">
+            <div
+              class="smartphone ml-0 mr-auto mr-md-auto ml-md-auto mr-sm-auto ml-lg-auto mr-lg-0 ml-sm-0 mt-md-5 mt-lg-0">
+              <div class="content">
+                <iframe src="rick/welcome.html" style="width:100%;border:none;height:100%"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-md-center text-lg-left order-1 order-lg-2">
+          <div class="hero-content__text ml-md-auto mr-md-auto mr-lg-auto ml-lg-0">
+            <h1>Rick</h1>
+            <h3>
+              Mobile eCommerce HTML Template (Layout Two)
+            </h3>
+            <div class="hero-content__qrcode">
+              <img src="p2/img/frame-2.png" alt="qr code" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-2 order-lg-1">
+          <div class="hero-content__mobile mb-5">
+            <div
+              class="smartphone ml-0 mr-auto mr-md-auto ml-md-auto mr-sm-auto mr-lg-auto ml-lg-0 ml-sm-0 mt-md-5 mt-lg-0">
+              <div class="content">
+                <iframe src="rick-two/welcome.html" style="width:100%;border:none;height:100%"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section End -->
+  <!-- Start Hero Section -->
+  <div class="hero-section section">
+    <div class="container">
+      <div class="row mb-5 align-items-center">
+        <div class="col-lg-6 text-md-center text-lg-left">
+          <div class="hero-content__text ml-md-auto mr-md-auto mr-lg-auto ml-lg-0">
+            <h1>Rick</h1>
+            <h3>
+              RTL Version of Mobile eCommerce HTML Template (Layout One)
+            </h3>
+            <div class="hero-content__qrcode">
+              <img src="p2/img/frame-3.png" alt="qr code" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-content__mobile mb-5">
+            <div
+              class="smartphone ml-0 mr-auto mr-md-auto ml-md-auto mr-sm-auto ml-lg-auto mr-lg-0 ml-sm-0 mt-md-5 mt-lg-0">
+              <div class="content">
+                <iframe src="rick-rtl/welcome.html" style="width:100%;border:none;height:100%"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-md-center text-lg-left order-1 order-lg-2">
+          <div class="hero-content__text ml-md-auto mr-md-auto mr-lg-auto ml-lg-0">
+            <h1>Rick</h1>
+            <h3>
+              RTL Version of Mobile eCommerce HTML Template (Layout Two)
+            </h3>
+            <div class="hero-content__qrcode">
+              <img src="p2/img/frame-4.png" alt="qr code" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-2 order-lg-1">
+          <div class="hero-content__mobile mb-5">
+            <div
+              class="smartphone ml-0 mr-auto mr-md-auto ml-md-auto mr-sm-auto mr-lg-auto ml-lg-0 ml-sm-0 mt-md-5 mt-lg-0">
+              <div class="content">
+                <iframe src="rick-two-rtl/welcome.html" style="width:100%;border:none;height:100%"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section End -->
+
+  <!-- Start feature Section -->
+  <div class="feature-section section bg-gray pt-150 pb-100">
+    <div class="container">
+      <div class="row">
+        <div class="section-title col-12 mb-70">
+          <h1>Rick Features</h1>
+        </div>
+
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-profile-male"></i></span>
+          <div class="content fix">
+            <h4>User Friendly</h4>
+            <p>
+              Rick is easy to use for any technical & nontechnical People.
+            </p>
+          </div>
+        </div>
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-beaker"></i></span>
+          <div class="content fix">
+            <h4>Creative Design</h4>
+            <p>It comes with creative & smart design layout.</p>
+          </div>
+        </div>
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-puzzle"></i></span>
+          <div class="content fix">
+            <h4>Icon Font</h4>
+            <p>It comes with most popular FontAwesome icon font.</p>
+          </div>
+        </div>
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-genius"></i></span>
+          <div class="content fix">
+            <h4>Google Font</h4>
+            <p>
+              600+ Google Fonts. You can change font for all elements easily.
+            </p>
+          </div>
+        </div>
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-search"></i></span>
+          <div class="content fix">
+            <h4>Clean Markup</h4>
+            <p>We developed it followed by W3C Markup.</p>
+          </div>
+        </div>
+        <div class="single-feature col-lg-4 col-md-6 col-12 mb-50">
+          <span class="icon float-left"><i class="icon-upload"></i></span>
+          <div class="content fix">
+            <h4>Free Updates</h4>
+            <p>Purchase once & get life-time free updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- feature Section End -->
+
+  <div class="footer-section section pt-65 pb-50 overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Make your website come to life quickly.</h1>
+          <a class="buy-btn float-right"
+            href="https://1.envato.market/c/417168/275988/4415?subId1=hasthemes&subId2=demo&subId3=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F25830301%3Flicense%3Dregular%26size%3Dsource&u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F25830301%3Flicense%3Dregular%26size%3Dsource">buy
+            Rick</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Placed JS at the end of the document so the pages load faster -->
+  <!-- jQuery latest version -->
+  <script src="p2/js/vendor/jquery-3.1.1.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Plugins js -->
+  <script src="p2/js/plugins.js"></script>
+  <!-- Ajax Mail js -->
+  <script src="p2/js/ajax-mail.js"></script>
+  <!-- Main js -->
+  <script src="p2/js/main.js"></script>
+</body>
+
+</html>

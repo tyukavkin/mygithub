@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <base href="" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="pinterest" content="nopin" />
+
+    <title ng-bind="$root.locationTitle">Umbraco</title>
+
+    <link href="https://bulma.jacker.io/DependencyHandler.axd?s=L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXNvY2lhbC9ib290c3RyYXAtc29jaWFsLmNzczsvdW1icmFjby9saWIvZm9udC1hd2Vzb21lL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzczs&amp;t=Css&amp;cdv=256162187" type="text/css" rel="stylesheet"/>
+</head>
+<body ng-class="{'touch':touchDevice, 'emptySection':emptySection, 'umb-drawer-is-visible':drawer.show, 'umb-tour-is-visible': tour.show, 'tabbing-active':tabbingActive}" ng-controller="Umbraco.MainController" id="umbracoMainPageBody">
+
+    <noscript>
+        <div style="margin: 10px;">
+            <h3><img src="https://bulma.jacker.io/umbraco/assets/img/application/logo.png" alt="Umbraco logo" style="vertical-align: text-bottom;" /> Umbraco</h3>
+            <p>For full functionality of Umbraco CMS it is necessary to enable JavaScript.</p>
+            <p>Here are the <a href="https://www.enable-javascript.com/" target="_blank" style="text-decoration: underline;">instructions how to enable JavaScript in your web browser</a>.</p>
+        </div>
+    </noscript>
+
+    <div ng-hide="!authenticated" ng-cloak>
+
+        <div style="display: none;" id="mainwrapper" class="clearfix">
+
+            <umb-app-header></umb-app-header>
+
+            <div class="umb-app-content">
+
+                <umb-navigation></umb-navigation>
+
+                <section id="contentwrapper">
+
+                    <div id="contentcolumn">
+
+                        <div class="umb-editor" ng-view></div>
+                        <div class="umb-editor__overlay" ng-if="infiniteMode"></div>
+
+                        <umb-editors></umb-editors>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <umb-tour
+                ng-if="tour.show"
+                model="tour">
+            </umb-tour>
+
+            <umb-notifications></umb-notifications>
+
+        </div>
+
+        <!-- help dialog controller by the help button - this also forces the backoffice UI to shift 400px  -->
+        <umb-drawer data-element="drawer" ng-if="drawer.show" model="drawer.model" view="drawer.view"></umb-drawer>
+
+        <umb-search ng-if="search.show" on-close="closeSearch()"></umb-search>
+
+    </div>
+
+    <umb-backdrop ng-if="backdrop.show"
+                  backdrop-opacity="backdrop.opacity"
+                  highlight-element="backdrop.element"
+                  highlight-prevent-click="backdrop.elementPreventClick"
+                  disable-events-on-click="backdrop.disableEventsOnClick">
+    </umb-backdrop>
+
+    <umb-overlay ng-if="overlay.show"
+                 model="overlay"
+                 position="{{overlay.position}}"
+                 view="overlay.view"
+                 parent-scope="overlay.parentScope">
+    </umb-overlay>
+
+    <umb-login
+        ng-if="login.show"
+        on-login="hideLoginScreen()">
+    </umb-login>
+
+    <script type="text/javascript">
+                var Umbraco = {};
+                Umbraco.Sys = {};
+                Umbraco.Sys.ServerVariables = {"umbracoUrls":{"externalLoginsUrl":"/umbraco/ExternalLogin","serverVarsJs":"/umbraco/ServerVariables","authenticationApiBaseUrl":"/umbraco/backoffice/UmbracoApi/Authentication/","currentUserApiBaseUrl":"/umbraco/backoffice/UmbracoApi/CurrentUser/"},"umbracoSettings":{"imageFileTypes":"jpeg,jpg,gif,bmp,png,tiff,tif","maxFileSize":"51200","usernameIsEmail":true,"allowPasswordReset":true,"loginBackgroundImage":"assets/img/login.jpg","canSendRequiredEmail":false},"isDebuggingEnabled":false,"application":{"cacheBuster":"2f1bb61869dfc51f27d684b074863158","applicationPath":"/"},"features":{"disabledFeatures":{"disableTemplates":false}}};
+            </script>
+
+    <script>
+
+        document.angularReady = function(app) {
+            
+var errors = [];
+app.value("externalLoginInfo", {
+errors: errors,
+providers: []
+});
+
+            
+var errors = [];
+app.value("resetPasswordCodeInfo", {
+errors: errors,
+resetCodeModel: null
+});
+
+            app.value("tinyMceAssets",
+["/DependencyHandler.axd?s=L3VtYnJhY28vbGliL3RpbnltY2UvdGlueW1jZS5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9wYXN0ZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvYW5jaG9yL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9jaGFybWFwL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy90YWJsZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvbGlzdHMvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2Fkdmxpc3QvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2hyL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9hdXRvbGluay9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvZGlyZWN0aW9uYWxpdHkvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL3RhYmZvY3VzL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9zZWFyY2hyZXBsYWNlL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9mdWxsc2NyZWVuL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9ub25lZGl0YWJsZS9wbHVnaW4ubWluLmpzOw&t=Javascript&cdv=256162187"]
+);
+
+
+            //required for the noscript trick
+            document.getElementById("mainwrapper").style.display = "inherit";
+        }
+    </script>
+
+    <script src="https://bulma.jacker.io/umbraco/lib/lazyload-js/lazyload.min.js"></script>
+    <script src="https://bulma.jacker.io/umbraco/Application?umb__rnd=9785cb9aabba3f13afcf46724126453c"></script>
+
+
+</body>
+</html>

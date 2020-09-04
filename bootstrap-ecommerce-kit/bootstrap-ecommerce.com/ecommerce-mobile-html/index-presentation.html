@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+
+<title>E-commerce mobile app template, mobile web view template </title>
+<meta name="description" content="html library for front-end developers to create online shop applications for android and ios">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico.html">
+
+<script src="js/jquery-2.0.0.min.js%3Fv=1.0" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.min.js%3Fv=1.0" type="text/javascript"></script>
+<script src="js/script.js%3Fv=1.0" type="text/javascript"></script>
+
+<link href="css/bootstrap.css%3Fv=1.0.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css%3Fv=1.0.html" rel="stylesheet" />
+
+
+<style>
+	body{
+		--device-margin: 1rem;
+		--device-width: 400px;
+		--device-height: 790px;
+		--device-frame-width: 15px;
+	}
+	.demo-device{
+		margin: var(--device-padding);;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: #222;
+		box-shadow: 0 2px 8px rgba(2,8,20,.1), 0 8px 16px rgba(2,8,20,.08);
+		width: var(--device-width);
+		height: var(--device-height);
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		border-radius: 40px;
+		transform: scale(0.9);
+		transform-origin: center center;
+		display: inline-block;
+	}
+
+	.demo-device iframe{
+		touch-action: pan-y;
+		margin: var(--device-frame-width);
+		width: calc(100% - var(--device-frame-width) * 2);
+		height: calc(100% - var(--device-frame-width) * 2);
+		border: none;
+		overflow: hidden;
+		border-radius: 20px;
+		
+	}
+
+	.padding-y{padding: 40px 0}
+	.padding-top: {padding-top: 40px}
+	.padding-bottom{padding-bottom: 40px}
+
+
+
+	@media (max-width: 620px) {
+	    .demo-views-wrap { display: none }
+
+	}
+
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	});
+</script>
+</head>
+<body>
+
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" id="modal_hire" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Let's talk about...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        &times
+        </button>
+      </div>
+      <div class="modal-body">
+		<ul class="list-check">
+			<li>UI/UX designing for  Web &amp Mobile </li>
+			<li>Converting your design into valid HTML5/CSS code</li>
+			<li>Customize this UI kit for your project</li>
+			<li>Have touble with downloading?</li>
+		</ul>
+		<p>Portfolio: <a href="http://behance.com/vosidiy" target="_blank">Behance.com/vosidiy</a> <br> 
+		Email me: vosidiy@gmail.com <br> 
+		Telegram chat: <a href="https://t.me/vosidiy" target="_blank">@vosidiy</a>
+		</p>
+		<p class="text-success">I will reply during the day</p>
+      </div>
+    </div>
+  </div>
+</div> <!-- modal.// -->
+
+<!-- ========================= SECTION HEADER ========================= -->
+<header class="main-header fixed-top">
+	<nav class="navbar navbar-light bg-white shadow-sm border-bottom navbar-expand justify-content-between flex-column flex-lg-row">
+
+		<a href="../templates/alistyle-html/_HTML-Components/page-blog.html" class="navbar-brand">
+			<img src="images/logo.png" class="logo" height="36">
+		</a>
+
+
+		<div>
+			<a class="btn btn-sm btn-light d-none d-lg-inline-block" data-toggle="modal" href="index-presentation.html#modal_hire"> Hire me </a>
+			<a class="btn btn-sm btn-primary d-none d-lg-inline-block" href="https://gumroad.com/l/ecommerce-mobile-html">Download mobile HTML</a>
+		</div>
+	</nav>
+</header>
+<!-- ========================= SECTION HEADER END // ========================= -->
+
+
+<section class="section-components padding-y" style="margin-top: 120px">
+<div class="container">
+
+<header class="section-heading">
+	<h2 class="section-title">Mobile ecommerce UI Kit (Bootstrap 4.x)</h2>
+	<p><b>Create a e-commerce webview apps </b>with html templates and code snippets. Made for web developers to build all type of ecommerce platform on mobile.  Based on Bootstrap 4 framework.  For more components and customization check <a target="_blank" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap documentation</a> </p>
+
+	<div class="row  align-items-center">
+		<div class="col-md-3 col-sm-4 flex-shrink-1 text-center text-md-left">
+			<img class="img-qr" src="images/qr.png" width="250"> </div>
+		<p class="col-md flex-grow-1 mb-0 text-center text-md-left">
+			<span class="font-weight-bold">Scan this QR to see live demo <br> ... or visit this page from Mobile device. </span><br> <br>
+			
+			<a class="p-3 btn-light d-block" href="index.html" target="_blank">http://bootstrap-ecommerce.com/ecommerce-mobile-html/</a>
+		</p>
+	</div>
+	<a class="btn-primary d-block d-sm-none btn mt-3" href="index.html">See live demo</a>
+</header><!-- sect-heading -->
+<hr>
+
+<div class="row text-center demo-views-wrap">
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-index-1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-index-2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-category-1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-category-2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-listing-1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-listing-2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-listing-3.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-listing-4.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-detail-1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-detail-2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-detail-3.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-detail-4.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-cart-1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-cart-2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-order-step1.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-order-step2.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-order-step3.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-order-success.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-profile.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-profile-edit.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-settings.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-user-login.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-user-otp.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="page-search.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="_html-components/_banners.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="_html-components/_category.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="_html-components/_menu-list.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="_html-components/_modals.html"></iframe>
+		</figure>	
+	</div>
+	<div class="col-md">
+		<figure class="demo-device">
+			<iframe loading="lazy"  importance="high" src="_html-components/_nav-bottom.html"></iframe>
+		</figure>	
+	</div>
+	
+</div>
+
+</div> <!-- container.// -->
+</section>
+<!-- ========================= SECTION COMPONENTS END// ========================= -->
+
+
+<!-- ========================= SECTION DOWNLOAD START ========================= -->
+<section class="padding-y bg-white">
+<div class="container">
+
+<article class="bg border rounded p-4 mx-auto shadow-lg" style="max-width: 720px;">
+	<div class="float-md-right text-center">
+		<a href="https://gumroad.com/l/ecommerce-mobile-html" target="_blank" class="btn mb-3 btn-primary mb-1">Download all</a>
+		<br><b>Only $5</b> &nbsp <del class="text-danger">$10</del>
+	</div>
+	<h4 class="">Download Ecommerce Mobile</h4>
+	<p class="text-muted">HTML, CSS, SASS, JS files, <br> Based on Bootstrap 4.x  </p>
+	<hr>
+	<span class="float-right text-success"><i class="fa fa-lock"></i> Secure Checkout </span>
+	<p class="mb-0">Have trouble with downloading? <a href="index-presentation.html#modal_hire" data-toggle="modal">Contact</a> </p>
+</article>
+
+</div> <!-- container.// -->
+</section>
+<!-- ========================= SECTION DOWNLOAD END// ========================= -->
+
+
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top padding-y">
+	<div class="container">
+		<p class="text-center mt-3"><img src="images/logo.png" height="38"></p>
+	</div><!-- //container -->
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115916444-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115916444-1');
+</script>
+
+</body>
+</html>

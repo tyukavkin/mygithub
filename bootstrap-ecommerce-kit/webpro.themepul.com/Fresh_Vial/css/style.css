@@ -1,0 +1,585 @@
+/*
+  Theme Name: Name - 
+  Author: Humayun Ahmed
+  Support: humayunahmed82@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index 
+-----------------------------------
+1. Theme default css
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+
+*/
+
+
+/*===========================
+    1. Theme default css 
+===========================*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:400,500,600,700');
+
+ body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	-webkit-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	text-decoration: none;
+}
+
+span,
+a{
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: #1d2025;
+	margin-top: 0px;
+}
+
+h1 {
+	font-weight: 500;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul,ol {
+	margin: 0px;
+	padding: 0px;
+    list-style-type: none;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #909291;
+	margin-bottom: 0px;
+}
+
+.bg_cover{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/*===== All Section title Style =====*/
+
+.section-title{}
+.section-title h2{
+    text-transform: uppercase;
+    margin-bottom: -8px;
+}
+.section-title ul li{
+    display: inline-block;
+    background-color: #2e4db9;
+    
+}
+.section-title ul li:nth-of-type(1),
+.section-title ul li:nth-of-type(5){
+    width: 10px;
+    height: 2px;
+}
+.section-title ul li:nth-of-type(2),
+.section-title ul li:nth-of-type(4){
+    width: 20px;
+    height: 3px;
+}
+
+.section-title ul li:nth-of-type(3){
+    width: 30px;
+    height: 4px;
+}
+.section-title p{
+    padding-top: 17px;
+}
+
+
+/*===== Preloader Style =====*/
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #fff;
+}
+.preloader .thecube {
+	width: 75px;
+	height: 75px;
+	position: relative;
+	-webkit-transform: rotateZ(45deg) translate(-50%,-50%);
+	transform: rotateZ(45deg) translate(-50%,-50%);
+	-webkit-box-sizing: content-box;
+	position: absolute;
+	top: 47%;
+	left: 47%;
+}
+.preloader .thecube .cube{
+    position: relative;
+    -webkit-transform: rotateZ(45deg) scale(1.1);
+    transform: rotateZ(45deg) scale(1.1);
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+.preloader .thecube .cube::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e4db9;
+    -webkit-animation: foldthecube 2.4s infinite linear both;
+    animation: foldthecube 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.preloader .thecube .cube.c1 {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.preloader .thecube .cube.c2{
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.preloader .thecube .cube.c3{
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.preloader .thecube .cube.c4{
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+
+.preloader .thecube .cube.c2::before{
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.preloader .thecube .cube.c3::before{
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.preloader .thecube .cube.c4::before{
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+@-webkit-keyframes foldthecube {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes foldthecube {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/*===========================
+    2. css 
+===========================*/
+
+.banner{
+    height: 400px;
+}
+
+.banner h2{
+    color: #2e4db9;
+}
+
+.banner a {
+	background-color: #2e4db9;
+	padding: 0 40px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+	line-height: 60px;
+	border: 4px solid #bfc9ea;
+	color: #fff;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+    margin: 30px 10px 0;
+}
+
+.singel-demo {
+    
+}
+.singel-demo .demo-image{
+    overflow: hidden;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(46,76,185,0.2);
+    box-shadow: 0px 5px 30px 0px rgba(46,76,185,0.2);
+}
+.singel-demo .demo-image img{
+    
+    width: 100%;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.singel-demo .demo-image img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.demo-btn {
+	padding: 0 30px;
+	line-height: 40px;
+	border-radius: 50px;
+	color: #fff;
+	background-color: #2c2d3e;
+	position: relative;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+    margin-top: 30px;
+}
+.demo-btn span {
+	position: absolute;
+	top: 8px;
+	right: 0;
+	background-color: #2e4db9;
+	padding: 7px 13px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	border-radius: 50px;
+    opacity: 0;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    z-index: -1;
+}
+.demo-btn span i{
+    width: 18px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.demo-btn:hover {
+    background-color: #2e4db9;
+    color: #fff;
+}
+.demo-btn:hover span {
+	right: -17px;
+	opacity: 1;
+    z-index: 9;
+}
+
+.feature_list ul li a {
+    color: #353535;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+.feature_list ul li a span {
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+.feature_list ul li a:hover {
+    color: #2e4db9;
+}
+
+.feature_list ul li a i {
+    padding-right: 6px;
+}
+
+
+.feature_list ul li a:hover span {
+    padding-left: 5px;
+    
+}
+
+
+.copyright {
+	background-color: #e0eef9;
+}
+.copyright p span {
+	color: #2e4db9;
+}
+
+
+.back-to-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #2e4db9;
+    text-align: center;
+    z-index: 999;
+    display: none;
+}
+.back-to-top img{
+    margin-top: 7px;
+}
+
+
+
+
+
+/*===========================
+    3. css 
+===========================*/
+
+
+
+
+
+
+
+
+/*===========================
+    4. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    5. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    6. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    7. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    8. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    9. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================
+    10. css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

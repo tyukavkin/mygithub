@@ -1,0 +1,3 @@
+﻿Sitemap: http://bulma.jacker.io/xmlsitemap
+User-agent: *
+Crawl-delay: 10
